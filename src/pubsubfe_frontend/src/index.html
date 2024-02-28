@@ -1,24 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>pubsubfe</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
+    <title>PubSub</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link type="text/css" rel="stylesheet" href="main.css" />
+ 
   </head>
+
   <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
+    <div class="container">
+      <h1>Subscriber</h1>
+      <br>
+      <h1>data: <span id="data"></span></h1>
+      <div class="divider"></div>
+      <form id="form-subscribe" action="#">
+        <h2>Publisher Id to Subscribe</h2>
+        <input id="input-pubid" type="text" min=0 name="pubId" value=""/>
+        <h2>Topic</h2>
+        <input id="input-topic" type="text" name="topic" value=""/>
+
+        <input id="submit-btn-subscribe" type="submit" value="Subscribe" />
       </form>
-      <section id="greeting"></section>
-    </main>
+    </div>
+
+    <div class="container">
+      <h1>Publisher</h1>
+      <br>
+      <h2>ID: <span id="pubid"></span></h2>
+      <div class="divider"></div>
+      <form id="form-publish" action="#">
+        <h2>Topic</h2>
+        <input id="input-topic2" type="text" name="topic" value=""/>
+        <h2>Data</h2>
+        <input id="input-data" type="text" name="number" value=""/>
+
+        <input id="submit-btn-publish" type="submit" value="Publish" />
+      </form>
+    </div>
+
   </body>
+
 </html>
