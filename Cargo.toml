@@ -1,4 +1,6 @@
 [workspace]
 members = [
-    "src/pubsubfe_backend",
+    "src/publisher",
+    "src/subscriber",
 ]
+resolver = "2"
