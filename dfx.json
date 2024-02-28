@@ -1,13 +1,19 @@
 {
   "canisters": {
-    "pubsubfe_backend": {
-      "candid": "src/pubsubfe_backend/pubsubfe_backend.did",
-      "package": "pubsubfe_backend",
+    "publisher": {
+      "candid": "src/publisher/publisher.did",
+      "package": "publisher",
+      "type": "rust"
+    },
+    "subscriber": {
+      "candid": "src/subscriber/subscriber.did",
+      "package": "subscriber",
       "type": "rust"
     },
     "pubsubfe_frontend": {
       "dependencies": [
-        "pubsubfe_backend"
+        "publisher",
+        "subscriber"
       ],
       "frontend": {
         "entrypoint": "src/pubsubfe_frontend/src/index.html"
