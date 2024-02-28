@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "pubsubfe_backend": {
+      "candid": "src/pubsubfe_backend/pubsubfe_backend.did",
+      "package": "pubsubfe_backend",
+      "type": "rust"
+    },
+    "pubsubfe_frontend": {
+      "dependencies": [
+        "pubsubfe_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/pubsubfe_frontend/src/index.html"
+      },
+      "source": [
+        "src/pubsubfe_frontend/assets",
+        "dist/pubsubfe_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
