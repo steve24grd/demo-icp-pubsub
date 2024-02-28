@@ -1,0 +1,12 @@
+type Counter = record {    
+    topic:text;
+    value:nat64;
+};
+type Subscriber = record {
+    topic:text;
+  };
+service : {
+     "subscribe": (subscriber:Subscriber) -> ();
+     "publish": (counter : Counter) -> ();
+     "get_id": () -> (text);
+}
